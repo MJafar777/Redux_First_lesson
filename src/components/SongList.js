@@ -1,8 +1,10 @@
 import React from "react";
 // import reactRedux from "react-redux";
 import { connect } from "react-redux";
+import index from "../actions/index";
 const SongList = (props) => {
   console.log(props);
+
   const renderList = () => {
     return props.songList.map((val) => {
       return (
@@ -18,7 +20,14 @@ const SongList = (props) => {
           </div>
           <div className="extra content">
             <div className="ui two buttons">
-              <div className="ui basic red button">Select Song</div>
+              <div
+                onClick={() => {
+                  props.index(val);
+                }}
+                className="ui basic red button"
+              >
+                Select Song
+              </div>
             </div>
           </div>
         </div>
@@ -35,4 +44,4 @@ const SongList = (props) => {
 const getMyState = (state) => {
   return state;
 };
-export default connect(getMyState)(SongList);
+export default connect(getMyState, { index })(SongList);
