@@ -10,7 +10,7 @@ const songList = [
 
 const songListReducer = (history = songList, song) => {
   return history;
-};
+};//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 
 const selectSongReducer = (history = [], selectedSong) => {
   if (selectedSong.type === "SELECTED") {
