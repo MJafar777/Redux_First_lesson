@@ -3,11 +3,14 @@ import SongDetail from "./SongDetail";
 import SongList from "./SongList";
 
 const App = (props) => {
-  // console.log(props); 
+  // console.log(props);
   return (
-    <div>
+    <div className="ui grid container">
+      <div className="eight wide column">
+        <SongList />
+      </div>
+
       <SongDetail />
-      <SongList />
     </div>
   );
 };
